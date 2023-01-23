@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --bg-testmonial1: hsl(263, 55%, 52%);
+    --bg-testmonial2: hsl(217, 19%, 35%);
+    --bg-testmonial4: hsl(219, 29%, 14%);
+    --bg-testmonial3-5: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    --fw-regular:500;
+    --fw-bold:600;
+
+    --fs-big: 1rem;
+
+    --br-size: 0.5rem;
+
+    --padding-space:1.2rem;
+}
+/*css reset*/
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+
+/* global stules*/
+body{
+    background-color: var(--Light-grayish-blue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: var(--fw-regular);
+}
+.grid-parent{
+    display: grid;
+    margin:  auto;
+    gap: var(--padding-space);
+    padding-block: 4rem;
+    width: min(95% , 70rem);
+}
+.testmonial__content{
+    display: grid;
+    gap: var(--padding-space);
+    width: 85%;
+    margin: auto;
+    grid-template-rows: 1fr ;
+    padding: var(--padding-space);
+}
+.testmonial__img{
+    border-radius: 50%;
+    display: inline;
+}
+.testmonial__picture{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.name{
+    color: white;
+    font-weight: var(--fw-bold);
+}
+.verfiy{
+    opacity: 0.5;
+    font-weight: var(--fw-regular);
+}
+.testomnial__bolded{
+    font-size: var(--fs-big);
+    font-weight: var(--fw-bold);
+    color: var(--bg-testmonial3-5);
+}
+.testmonial__regular{
+    color: var(--bg-testmonial3-5);
+    opacity: 0.7;
+}
+.testmonial1{
+    background-color: var(--bg-testmonial1);
+    border-radius:var(--br-size);
+}
+.testmonial1 .testmonial__content{
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.testmonial2{
+    background-color: var(--bg-testmonial2);
+    border-radius:var(--br-size);
+}
+.testmonial3{
+    background-color: var(--bg-testmonial3-5);
+    border-radius:var(--br-size);
+}
+.testmonial4{
+    background-color: var(--bg-testmonial4);
+    border-radius:var(--br-size);
+}
+.testmonial5{
+    background-color: var(--bg-testmonial3-5);
+    border-radius:var(--br-size);
+}
+.white-bg-adjusment{
+    color: var(--bg-testmonial2);
+}
+@media (min-width:450px) {
+    .grid-parent{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .testmonial1{
+        grid-column: span 2 ;
+    }
+    .testmonial5{
+        grid-row: 1 / 3;
+        grid-column: 4 ;
+    }
+    .testmonial4{
+        grid-column: span 2;
+    }
+}
