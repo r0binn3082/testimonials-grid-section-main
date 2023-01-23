@@ -52,7 +52,7 @@ body{
     display: grid;
     margin:  auto;
     gap: var(--padding-space);
-    padding-block: 4rem;
+    padding-block: 3rem;
     width: min(95% , 70rem);
 }
 .testmonial__content{
